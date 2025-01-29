@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dropdown</title>
+  <style>
+    /* General reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Navbar styling */
+    .navbar {
+      background-color: #006400;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: white;
+    }
+
+    .navbar .nav-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .navbar a:hover {
+      text-decoration: underline;
+    }
+
+    /* Profile dropdown */
+    .profile-container {
+      position: relative;
+      margin-left: 30px;
+    }
+
+    .profile-dropdown {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #0ea438;
+      color: white;
+      width: 400px;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-dropdown::before {
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 20px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #0ea438;
+    }
+
+    .profile-dropdown .profile-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+
+    .profile-dropdown img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+    }
+
+    .profile-dropdown .name-and-nis {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .profile-dropdown .name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .profile-dropdown .nis {
+      font-size: 14px;
+      color: #d4d4d4;
+    }
+
+    .profile-dropdown .rooms {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .profile-dropdown .rooms::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 1px;
+      background-color: white;
+      margin-top: 5px;
+    }
+
+    .profile-dropdown .rooms:hover {
+      text-decoration: underline;
+    }
+
+    .profile-dropdown .logout {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+      gap: 8px;
+    }
+
+    .profile-dropdown .logout img {
+      width: 16px;
+      height: 16px;
+    }
+
+    .profile-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      cursor: pointer;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <div class="logo" style="font-size: 24px; font-weight: bold;">BOOKING</div>
+    <div class="nav-links">
+      <a href="home.html">Home</a> 
+      <a href="about.html">About</a> 
+      <a href="contact.html">Contact</a> 
+      <a href="booking.html">Booking</a> 
+      <div class="profile-container">
+        <!-- Profile icon -->
+        <img src="Image/PROFILE.png" alt="Profile Icon" class="profile-icon" id="profile-link">
+        <!-- Dropdown menu -->
+        <div class="profile-dropdown" id="profile-dropdown">
+          <div class="profile-info">
+            <img src="Image/PROFILE.png" alt="Profile Picture">
+            <div class="name-and-nis">
+              <div class="name">Nama</div>
+              <div class="nis">NIS</div>
+            </div>
+          </div>
+          <a href="rooms.html" class="rooms">Rooms</a> <!-- Menambahkan link ke halaman Rooms -->
+          <a href="#" class="logout">
+            <img src="Image/LOGOUT.png" alt="Logout Icon"> Log Out
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Select elements
+    const profileLink = document.getElementById('profile-link');
+    const profileDropdown = document.getElementById('profile-dropdown');
+
+    // Toggle dropdown visibility
+    profileLink.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+      profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.profile-container')) {
+        profileDropdown.style.display = 'none';
+      }
+    });
+  </script>
+
+</body>
+</html>
