@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruangan Grid</title>
+    <style>
+        /* General reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Navbar styling */
+        .navbar {
+            background-color: #006400;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 20px;
+        }
+
+        .navbar .logo {
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 19px;
+        }
+
+        .nav-links a:hover {
+            text-decoration: underline;
+        }
+
+        /* Profile dropdown */
+        .profile-container {
+            position: relative;
+        }
+
+        .profile-dropdown {
+            display: none;
+            position: absolute;
+            top: 60px;
+            right: 0;
+            background-color: #0ea438;
+            color: white;
+            width: 250px;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .profile-dropdown::before {
+            content: '';
+            position: absolute;
+            top: -10px;
+            right: 20px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid #0ea438;
+        }
+
+        .profile-dropdown .profile-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .profile-dropdown img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .profile-dropdown .name-and-nis {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-dropdown .name {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .profile-dropdown .nis {
+            font-size: 14px;
+            color: #d4d4d4;
+        }
+
+        .profile-dropdown .rooms {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .profile-dropdown .rooms::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: white;
+            margin-top: 5px;
+        }
+
+        .profile-dropdown .rooms:hover {
+            text-decoration: underline;
+        }
+
+        .profile-dropdown .logout {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            gap: 8px;
+        }
+
+        .profile-dropdown .logout img {
+            width: 16px;
+            height: 16px;
+        }
+
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            object-fit: cover;
+        }
+
+        /* Grid container */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .room {
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .room img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .room .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            color: white;
+            font-size: 19px;
+            font-weight: bold;
+            text-align: left;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <div class="logo">ROOMS</div>
+        <div class="nav-links">
+            <a href="home.html">Home</a> 
+            <a href="about.html">About</a> 
+            <a href="contact.html">Contact</a> 
+            <a href="booking.html">Booking</a> 
+            <div class="profile-container">
+                <!-- Profile icon -->
+                <img src="Image/PROFILE.png" alt="Profile Icon" class="profile-icon" id="profile-link">
+                <!-- Dropdown menu -->
+                <div class="profile-dropdown" id="profile-dropdown">
+                    <div class="profile-info">
+                        <img src="https://via.placeholder.com/50" alt="Profile Picture">
+                        <div class="name-and-nis">
+                            <div class="name">Nama</div>
+                            <div class="nis">NIS</div>
+                        </div>
+                    </div>
+                    <a href="rooms.html" class="rooms">Rooms</a> <!-- Menambahkan garis bawah -->
+                    <a href="#" class="logout">
+                        <img src="https://via.placeholder.com/16" alt="Logout Icon"> Log Out
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Room Block Template -->
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 1</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 2</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 3</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 4</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 5</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 6</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 7</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 8</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 9</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 10</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 11</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 12</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 13</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 14</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 15</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 16</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 17</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 18</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 19</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 20</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 21</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 22</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 23</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 24</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 25</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 26</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 27</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 28</div>
+        </div>
+        <div class="room">
+            <img src="https://via.placeholder.com/300x200" alt="Room Image">
+            <div class="overlay">Ruang 29</div>
+        </div>
+        <!-- Tambahkan lebih banyak ruangan di sini -->
+    </div>
+
+    <script>
+        // Select elements
+        const profileLink = document.getElementById('profile-link');
+        const profileDropdown = document.getElementById('profile-dropdown');
+
+        // Toggle dropdown visibility
+        profileLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default link behavior
+            profileDropdown.style.display = profileDropdown.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.profile-container')) {
+                profileDropdown.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+</html>
