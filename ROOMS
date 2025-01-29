@@ -76,6 +76,11 @@
             padding: 20px;
             box-sizing: border-box;
         }
+
+        /* Add anchor styling to prevent default link styles */
+        a {
+            text-decoration: none;
+        }
     </style>
 </head>
 <body>
@@ -85,144 +90,213 @@
     <div class="divider"></div>
 
     <div class="container">
-         <!-- Room Block Template -->
-         <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 1</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 2</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 3</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 4</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 5</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 6</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 7</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 8</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 9</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 10</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 11</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 12</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 13</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 14</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 15</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 16</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 17</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 18</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 19</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 20</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang 21</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Ruang Audio Visual</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab Bahasa</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab Fisika</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab Kimia</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab Biologi</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab AGAMA</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Perpustakaan </div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lab Komputer</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lapangan Atas</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lapangan Bawah</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Lapangan Bulutangkis</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Taman Literasi</div>
-        </div>
-        <div class="room">
-            <img src="https://via.placeholder.com/300x200" alt="Room Image">
-            <div class="overlay">| Kantin Atas</div>
-        </div>
-        <!-- Tambahkan lebih banyak ruangan di sini -->
+        <!-- Room Block Template -->
+        <a href="room1.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 1</div>
+            </div>
+        </a>
+        <a href="room2.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 2</div>
+            </div>
+        </a>
+        <a href="room3.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 3</div>
+            </div>
+        </a>
+        <a href="room4.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 4</div>
+            </div>
+        </a>
+        <a href="room5.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 5</div>
+            </div>
+        </a>
+        <a href="room6.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 6</div>
+            </div>
+        </a>
+        <a href="room7.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 7</div>
+            </div>
+        </a>
+        <a href="room8.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 8</div>
+            </div>
+        </a>
+        <a href="room9.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 9</div>
+            </div>
+        </a>
+        <a href="room10.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 10</div>
+            </div>
+        </a>
+        <a href="room11.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 11</div>
+            </div>
+        </a>
+        <a href="room12.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 12</div>
+            </div>
+        </a>
+        <a href="room13.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 13</div>
+            </div>
+        </a>
+        <a href="room14.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 14</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 15</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 16</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 17</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 18</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 19</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 20</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang 21
+                </div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Bahasa</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Fisika</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Kimia</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Biologi</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Agama</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Ruang Musik</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Perpustakaan</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lab Komputer</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lapangan Atas</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lapangan Bawah</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Lapangan Bulutangkis</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Taman Literasi</div>
+            </div>
+        </a>
+        <a href="room15.html" target="_blank">
+            <div class="room">
+                <img src="https://via.placeholder.com/300x200" alt="Room Image">
+                <div class="overlay">| Kantin Atas</div>
+            </div>
+        </a>
+        <!-- More rooms as needed -->
     </div>
 
     <script>
