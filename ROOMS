@@ -199,7 +199,7 @@
             <a href="home.html">Home</a> 
             <a href="about.html">About</a> 
             <a href="contact.html">Contact</a> 
-            <a href="booking.html">Booking</a> 
+            <a href="Rooms.html">Rooms</a> 
             <div class="profile-container">
                 <!-- Profile icon -->
                 <img src="Image/PROFILE.png" alt="Profile Icon" class="profile-icon" id="profile-link">
