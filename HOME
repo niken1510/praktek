@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman dengan Gambar Slider</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        
+        .slider {
+            position: relative;
+            max-width: 1500px; /* Membatasi lebar maksimum slider */
+            margin: auto;
+            overflow: hidden; /* Menyembunyikan gambar yang tidak terlihat */
+        }
+
+        .slides {
+            display: flex; /* Mengatur gambar dalam satu baris */
+            transition: transform 0.5s ease; /* Animasi transisi */
+        }
+
+        .slide {
+            min-width: 100%; /* Setiap gambar mengambil lebar penuh slider */
+            height: 350px; /* Mengatur tinggi gambar */
+            object-fit: cover; /* Memastikan gambar terpotong dengan baik */
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        p {
+            color: #666;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .additional-image {
+            margin-top: 20px; /* Jarak antara slider dan gambar tambahan */
+            max-width: 800px; /* Membuat gambar responsif */
+            height: auto; /* Mengatur tinggi otomatis */
+        }
+        .additional-image-2 {
+            margin: 0;
+            max-width: 100%;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="slider">
+            <div class="slides">
+                <img src="Image/FOTO 1.png" alt="Gambar 1" class="slide">
+                <img src="Image/FOTO 2.png" alt="Gambar 2" class="slide">
+                <img src="Image/FOTO 3.png" alt="Gambar 3" class="slide">
+            </div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </header>
+    <main>
+        <img src="Image/SLOGAN.png" alt="Gambar Tambahan" class="additional-image"> <!-- Gambar tambahan -->
+        <img src="Image/FOTO 1.png" alt="Gambar Tambahan 2" class="additional-image-2"> <!-- Gambar tambahan baru -->
+    </main>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slide');
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Menyembunyikan semua gambar
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 } // Kembali ke gambar pertama
+            slides[slideIndex - 1].style.display = "block"; // Menampilkan gambar saat ini
+            setTimeout(showSlides, 3000); // Mengganti gambar setiap 3 detik
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            const slides = document.querySelectorAll('.slide');
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            if (slideIndex < 1) { slideIndex = slides.length }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none"; // Menyembunyikan semua gambar
+            }
+            slides[slideIndex - 1].style.display = "block"; // Menampilkan gambar saat ini
+        }
+
+    </script>
+</body>
+</html>
